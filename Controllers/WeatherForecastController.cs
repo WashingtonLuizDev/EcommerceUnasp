@@ -13,7 +13,7 @@ namespace EcommerceUnasp.Controllers
     {
         private static readonly string[] Summaries = new[]
         {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Calor", "Sweltering", "Nevando"
+            "Frio", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Calor", "Sweltering", "Nevando"
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
