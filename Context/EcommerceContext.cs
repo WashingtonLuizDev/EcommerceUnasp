@@ -1,9 +1,5 @@
 ﻿using EcommerceUnasp.Entity;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace EcommerceUnasp.Context
 {
@@ -22,6 +18,11 @@ namespace EcommerceUnasp.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            
+            modelBuilder.Entity<Cliente>(c => c.ToTable("Cliente"));
+            modelBuilder.Entity<Categoria>(c => c.ToTable("Categoria"));
+            modelBuilder.Entity<Endereco>(c => c.ToTable("Endereco"));
+            modelBuilder.Entity<Produto>(c => c.ToTable("Produto"));
         }
     }
 }
