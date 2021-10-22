@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projetos\\GitHub\\Unasp\\EcommerceUnasp\\EcommerceUnasp.csproj": {}
+    "C:\\Users\\eduvi\\Desktop\\Projeto FullStack\\EcommerceUnasp\\EcommerceUnasp.csproj": {}
   },
   "projects": {
-    "C:\\Projetos\\GitHub\\Unasp\\EcommerceUnasp\\EcommerceUnasp.csproj": {
+    "C:\\Users\\eduvi\\Desktop\\Projeto FullStack\\EcommerceUnasp\\EcommerceUnasp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\GitHub\\Unasp\\EcommerceUnasp\\EcommerceUnasp.csproj",
+        "projectUniqueName": "C:\\Users\\eduvi\\Desktop\\Projeto FullStack\\EcommerceUnasp\\EcommerceUnasp.csproj",
         "projectName": "EcommerceUnasp",
-        "projectPath": "C:\\Projetos\\GitHub\\Unasp\\EcommerceUnasp\\EcommerceUnasp.csproj",
-        "packagesPath": "C:\\Users\\WashX\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\GitHub\\Unasp\\EcommerceUnasp\\obj\\",
+        "projectPath": "C:\\Users\\eduvi\\Desktop\\Projeto FullStack\\EcommerceUnasp\\EcommerceUnasp.csproj",
+        "packagesPath": "C:\\Users\\eduvi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eduvi\\Desktop\\Projeto FullStack\\EcommerceUnasp\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\WashX\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\eduvi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://packagesource": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -67,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
