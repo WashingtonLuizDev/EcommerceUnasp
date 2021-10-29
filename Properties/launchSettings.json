@@ -12,7 +12,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "",
+      "launchUrl": "http://localhost:13326/api/Cliente",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -20,8 +20,8 @@
     "EcommerceUnasp": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "",
-      "applicationUrl": "http://localhost:5000",
+      "launchUrl": "http://localhost:13326/api/Cliente",
+      "applicationUrl": "http://localhost:13326",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
