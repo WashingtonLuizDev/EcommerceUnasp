@@ -60,7 +60,7 @@ namespace EcommerceUnasp.Controllers
             return categoria;
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {
             using(_context)

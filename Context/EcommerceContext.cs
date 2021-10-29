@@ -9,6 +9,9 @@ namespace EcommerceUnasp.Context
         public DbSet<Categoria> Categorias { get; set; }
         public DbSet<Endereco> Enderecos { get; set; }
         public DbSet<Produto> Produtos { get; set; }
+        public DbSet<Pedido> Pedidos { get; set; }
+        public DbSet<ItensPedido> ItensPedido { get; set; }
+        public DbSet<FormaPagamento> FormaPagamentos { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -23,6 +26,9 @@ namespace EcommerceUnasp.Context
             modelBuilder.Entity<Categoria>(c => c.ToTable("Categoria"));
             modelBuilder.Entity<Endereco>(c => c.ToTable("Endereco"));
             modelBuilder.Entity<Produto>(c => c.ToTable("Produto"));
+            modelBuilder.Entity<Pedido>(c => c.ToTable("Pedido"));
+            modelBuilder.Entity<ItensPedido>(c => c.ToTable("ItensPedido"));
+            modelBuilder.Entity<FormaPagamento>(c => c.ToTable("FormaPagamento"));
         }
     }
 }
