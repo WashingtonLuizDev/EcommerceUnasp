@@ -121,3 +121,9 @@ C:\Projetos\GitHub\Unasp\EcommerceUnasp\obj\Debug\netcoreapp3.1\EcommerceUnasp.R
 C:\Projetos\GitHub\Unasp\EcommerceUnasp\obj\Debug\netcoreapp3.1\EcommerceUnasp.dll
 C:\Projetos\GitHub\Unasp\EcommerceUnasp\obj\Debug\netcoreapp3.1\EcommerceUnasp.pdb
 C:\Projetos\GitHub\Unasp\EcommerceUnasp\obj\Debug\netcoreapp3.1\EcommerceUnasp.genruntimeconfig.cache
+C:\Projetos\GitHub\Unasp\EcommerceUnasp\bin\Debug\netcoreapp3.1\FrontEnd\EcommerceUnasp\angular.json
+C:\Projetos\GitHub\Unasp\EcommerceUnasp\bin\Debug\netcoreapp3.1\FrontEnd\EcommerceUnasp\package-lock.json
+C:\Projetos\GitHub\Unasp\EcommerceUnasp\bin\Debug\netcoreapp3.1\FrontEnd\EcommerceUnasp\package.json
+C:\Projetos\GitHub\Unasp\EcommerceUnasp\bin\Debug\netcoreapp3.1\FrontEnd\EcommerceUnasp\tsconfig.app.json
+C:\Projetos\GitHub\Unasp\EcommerceUnasp\bin\Debug\netcoreapp3.1\FrontEnd\EcommerceUnasp\tsconfig.json
+C:\Projetos\GitHub\Unasp\EcommerceUnasp\bin\Debug\netcoreapp3.1\FrontEnd\EcommerceUnasp\tsconfig.spec.json
