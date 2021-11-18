@@ -8,12 +8,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProdutosComponent } from './components/produtos/produtos.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ClienteComponent } from './components/cliente/cliente.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ProdutosComponent
+    ProdutosComponent,
+    ClienteComponent
   ],
   imports: [
     BrowserModule,

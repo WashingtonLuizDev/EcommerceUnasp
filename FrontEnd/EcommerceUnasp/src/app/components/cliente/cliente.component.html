@@ -1,0 +1,20 @@
+<div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h6>Cliente</h6>
+  <form (ngSubmit)="salvar()" [formGroup]="form">
+    Nome: <input type="text" name="Nome" id="txtNome" value="" [(ngModel)]=cliente.nome
+      formControlName="nomeFormControl"><br>
+    CPF: <input type="text" name="CPF" id="txtCPF" value="" [(ngModel)]=cliente.cpf
+      formControlName="cpfFormControl"><br>
+    Data de Nascimento: <input type="date" name="DataNascimento" id="txtDataNascimento" value=""
+      [(ngModel)]=cliente.dataNascimento formControlName="dataNascimentoFormControl"><br>
+    Email: <input type="email" name="Email" id="txtEmail" value="" [(ngModel)]=cliente.email
+      formControlName="emailFormControl"><br>
+    Senha: <input type="password" name="Senha" id="txtSenha" value="" [(ngModel)]=cliente.senha
+      formControlName="senhaFormControl"><br>
+    <button>Salvar</button>
+  </form>
+</div>

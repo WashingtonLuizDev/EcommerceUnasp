@@ -10,22 +10,22 @@ import { ProdutosService } from 'src/app/services/produtos.service';
 })
 export class ProdutosComponent implements OnInit {
 
-  produto : Produto = new Produto();
+  produto: Produto = new Produto();
   form: FormGroup;
   imagemFormControl = this.formBuild.control('', {
-    validators: [], updateOn: 'blur'
+    validators: [Validators.required], updateOn: 'blur'
   })
   tituloFormControl = this.formBuild.control('', {
     validators: [Validators.required], updateOn: 'blur'
   });
   categoriaFormControl = this.formBuild.control('', {
-    validators: [], updateOn: 'blur'
+    validators: [Validators.required], updateOn: 'blur'
   });
   descricaoFormControl = this.formBuild.control('', {
     validators: [Validators.required], updateOn: 'blur'
   });
   valorFormControl = this.formBuild.control('', {
-    validators: [], updateOn: 'blur'
+    validators: [Validators.required], updateOn: 'blur'
   });
 
   constructor(private formBuild: FormBuilder,
