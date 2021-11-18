@@ -1,10 +1,18 @@
 <div>
+    <br>
+    <br>
+    <h6>Produtos</h6>
     <form (ngSubmit)="salvar()" [formGroup]="form">
-        Título: <input type="text" name="Titulo" id="txtTitulo" value="" [(ngModel)]="produto.titulo" formControlName="tituloFormControl"><br>
-        Descrição: <input type="text" name="Descricao" id="txtDescricao" value="" [(ngModel)]="produto.descricao" formControlName="descricaoFormControl"><br>
-        Imagem: <input type="text" name="Imagem" id="txtImagem" value="" [(ngModel)]="produto.imagem" formControlName="imagemFormControl"><br>
-        Valor: <input type="number" name="Valor" id="txtValor" value="" [(ngModel)]="produto.valor" formControlName="valorFormControl"><br>
-        Categoria: <input type="number" name="Categoria" id="txtCategoria" value="" [(ngModel)]="produto.categoriaId" formControlName="categoriaFormControl"><br>
+        Título: <input type="text" name="Titulo" id="txtTitulo" value="" [(ngModel)]="produto.titulo"
+            formControlName="tituloFormControl"><br>
+        Descrição: <input type="text" name="Descricao" id="txtDescricao" value="" [(ngModel)]="produto.descricao"
+            formControlName="descricaoFormControl"><br>
+        Imagem: <input type="text" name="Imagem" id="txtImagem" value="" [(ngModel)]="produto.imagem"
+            formControlName="imagemFormControl"><br>
+        Valor: <input type="number" name="Valor" id="txtValor" value="" [(ngModel)]="produto.valor"
+            formControlName="valorFormControl"><br>
+        Categoria: <input type="number" name="Categoria" id="txtCategoria" value="" [(ngModel)]="produto.categoriaId"
+            formControlName="categoriaFormControl"><br>
         <button>Salvar</button>
     </form>
 </div>
