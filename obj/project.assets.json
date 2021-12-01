@@ -5702,19 +5702,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\eduvi\\.nuget\\packages\\": {}
+    "C:\\Users\\WashX\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GitHub\\EcommerceUnasp\\EcommerceUnasp.csproj",
+      "projectUniqueName": "C:\\Projetos\\GitHub\\Unasp\\EcommerceUnasp\\EcommerceUnasp.csproj",
       "projectName": "EcommerceUnasp",
-      "projectPath": "C:\\GitHub\\EcommerceUnasp\\EcommerceUnasp.csproj",
-      "packagesPath": "C:\\Users\\eduvi\\.nuget\\packages\\",
-      "outputPath": "C:\\GitHub\\EcommerceUnasp\\obj\\",
+      "projectPath": "C:\\Projetos\\GitHub\\Unasp\\EcommerceUnasp\\EcommerceUnasp.csproj",
+      "packagesPath": "C:\\Users\\WashX\\.nuget\\packages\\",
+      "outputPath": "C:\\Projetos\\GitHub\\Unasp\\EcommerceUnasp\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\eduvi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\WashX\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5722,8 +5727,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://packagesource": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {

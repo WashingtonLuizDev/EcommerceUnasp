@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Cliente } from 'src/app/models/cliente.model';
 import { ClienteService } from 'src/app/services/cliente.service';
 
@@ -30,7 +31,8 @@ export class ClienteComponent implements OnInit {
   })
 
   constructor(private formBuild: FormBuilder,
-    private clienteService: ClienteService) {
+    private clienteService: ClienteService,
+    private route: Router) {
     this.form = this.formBuild.group({
       nomeFormControl: this.nomeFormControl,
       cpfFormControl: this.cpfFormControl,
@@ -57,12 +59,15 @@ export class ClienteComponent implements OnInit {
       if (this.cliente.id == undefined || this.cliente.id == null) {
         this.clienteService.post(this.cliente).subscribe((cliente: Cliente) => {
           this.cliente = cliente;
+          this.route.navigateByUrl('/lista-clientes');
         });
       } else {
         this.clienteService.put(this.cliente).subscribe((cliente: Cliente) => {
           this.cliente = cliente;
+          this.route.navigateByUrl('/lista-clientes');
         })
       }
     }
   }
+
 }

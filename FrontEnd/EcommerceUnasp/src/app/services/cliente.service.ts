@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Cliente } from '../models/cliente.model';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +21,7 @@ export class ClienteService {
   }
 
   //Alterar os dados no banco de dados.
-  put(cliente: Cliente) {
+  put(cliente: Cliente): Observable<any>{
     return this.http.put<Cliente>("http://localhost:13326/api/Cliente", cliente);
   }
 
@@ -30,13 +31,24 @@ export class ClienteService {
   }
 
   //Consultar um cliente especifico.
-  getById(id: number) {
-    return this.http.get<Cliente>("http://localhost:13326/api/Cliente/" + id);
+  getById(id: string): Observable<Cliente>{
+    return this.http.get<Cliente>(`${"http://localhost:13326/api/Cliente/"}${id}`);
   }
 
   //Remover um cliente usando o Id.
   delete(id: number) {
-    this.http.delete<Cliente>("http://localhost:13326/api/Cliente/" + id);
+    return this.http.delete("http://localhost:13326/api/Cliente/"+id);
+    // this.http.delete("http://localhost:13326/api/Cliente/"+id)
+    //         .subscribe(
+    //           resultado => {
+    //             console.log('Cliente excluído com sucesso.');
+    //           },
+    //           erro => {
+    //             if(erro.status == 404) {
+    //               console.log('Cliente não localizado.');
+    //             }
+    //           }
+    //         );
   }
 
 }

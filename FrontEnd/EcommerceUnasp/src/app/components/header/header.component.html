@@ -3,9 +3,11 @@
     <nav id="menu">
         <ul>
             <li><a href="#">Inicio</a></li>
-            <li><a href="http://localhost:4200/Produtos">Produtos</a></li>
+            <li><a [routerLink]="['/lista-produtos']" routerLinkActive="router-link-active">Produtos</a></li>
+            <li><a [routerLink]="['/lista-categoria']" routerLinkActive="router-link-active">Categorias</a></li>
+            <li><a [routerLink]="['/pedido']" routerLinkActive="router-link-active">Pedidos</a></li>
+            <li><a [routerLink]="['/lista-clientes']" routerLinkActive="router-link-active">Clientes</a></li>
             <li><a href="#">Duvidas Frequentes</a></li>
-            <li><a href="#">Trocas e Devoluções</a></li>
             <li><a href="#">Contato</a></li>
         </ul>
     </nav>

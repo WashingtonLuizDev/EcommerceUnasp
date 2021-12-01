@@ -9,13 +9,17 @@ import { ProdutosComponent } from './components/produtos/produtos.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ClienteComponent } from './components/cliente/cliente.component';
+import { ClientesListaComponent } from './components/cliente/clientes-lista.component';
+import { ClienteEditarComponent } from './components/cliente/cliente-editar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ProdutosComponent,
-    ClienteComponent
+    ClienteComponent,
+    ClientesListaComponent,
+    ClienteEditarComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +29,7 @@ import { ClienteComponent } from './components/cliente/cliente.component';
     HttpClientModule,
     ReactiveFormsModule
   ],
+  exports: [ClientesListaComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
