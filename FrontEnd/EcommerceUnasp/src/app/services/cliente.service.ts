@@ -11,6 +11,10 @@ export class ClienteService {
   constructor(private http: HttpClient) { }
 
   //Inserir no banco de dados.
+  login(cliente: Cliente) {
+    return this.http.post<Cliente>("http://localhost:13326/api/Cliente/login", cliente);
+  }
+
   post(cliente: Cliente) {
     /*return pois o backend retornará um objeto
      this.http.post para chamar o metodo POST do backend
@@ -21,7 +25,7 @@ export class ClienteService {
   }
 
   //Alterar os dados no banco de dados.
-  put(cliente: Cliente): Observable<any>{
+  put(cliente: Cliente): Observable<any> {
     return this.http.put<Cliente>("http://localhost:13326/api/Cliente", cliente);
   }
 
@@ -31,13 +35,13 @@ export class ClienteService {
   }
 
   //Consultar um cliente especifico.
-  getById(id: string): Observable<Cliente>{
+  getById(id: string): Observable<Cliente> {
     return this.http.get<Cliente>(`${"http://localhost:13326/api/Cliente/"}${id}`);
   }
 
   //Remover um cliente usando o Id.
   delete(id: number) {
-    return this.http.delete("http://localhost:13326/api/Cliente/"+id);
+    return this.http.delete("http://localhost:13326/api/Cliente/" + id);
     // this.http.delete("http://localhost:13326/api/Cliente/"+id)
     //         .subscribe(
     //           resultado => {

@@ -11,6 +11,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { ClienteComponent } from './components/cliente/cliente.component';
 import { ClientesListaComponent } from './components/cliente/clientes-lista.component';
 import { ClienteEditarComponent } from './components/cliente/cliente-editar.component';
+import { HomeComponent } from './components/home/home.component';
+import { CategoriaComponent } from './components/categoria/categoria.component';
+import { PedidoComponent } from './components/pedido/pedido.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { ClienteEditarComponent } from './components/cliente/cliente-editar.comp
     ProdutosComponent,
     ClienteComponent,
     ClientesListaComponent,
-    ClienteEditarComponent
+    ClienteEditarComponent,
+    HomeComponent,
+    CategoriaComponent,
+    PedidoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
