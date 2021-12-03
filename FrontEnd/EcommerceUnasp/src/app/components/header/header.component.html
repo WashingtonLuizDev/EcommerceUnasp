@@ -3,12 +3,12 @@
     <nav id="menu">
         <ul>
             <li><a [routerLink]="['/home']" routerLinkActive="router-link-active">Inicio</a></li>
-            <li><a [routerLink]="['/lista-produtos']" routerLinkActive="router-link-active">Produtos</a></li>
-            <li><a [routerLink]="['/lista-categoria']" routerLinkActive="router-link-active">Categorias</a></li>
-            <li><a [routerLink]="['/pedido']" routerLinkActive="router-link-active">Pedidos</a></li>
-            <li><a [routerLink]="['/lista-clientes']" routerLinkActive="router-link-active">Clientes</a></li>
-            <li><a href="#">Duvidas Frequentes</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a *ngIf="!administradorLogado() && !clienteLogado()" type="button" class="btn btn-outline-primary me-2" [routerLink]="['/login']">Login</a></li>
+            <span *ngIf="administradorLogado() || clienteLogado()">Olá {{nomeCliente()}}</span>
+            <li><a *ngIf="administradorLogado()" [routerLink]="['/lista-produtos']" routerLinkActive="router-link-active">Lista Produtos</a></li>
+            <li><a *ngIf="administradorLogado()" [routerLink]="['/lista-categoria']" routerLinkActive="router-link-active">Categorias</a></li>
+            <li><a [routerLink]="['/pedido']" routerLinkActive="router-link-active">Produtos</a></li>
+            <li><a *ngIf="administradorLogado()" [routerLink]="['/lista-clientes']" routerLinkActive="router-link-active">Clientes</a></li>
             <li>
                 <a class="btn-cart" href="javascript:" [routerLink]="['/carrinho']" routerLinkActive="router-link-active" ><img src="assets/imgs/Shopping-basket-full-icon.png" alt=""></a>          
             </li>

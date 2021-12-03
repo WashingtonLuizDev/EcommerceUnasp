@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -17,6 +16,7 @@ import { LoginComponent } from './components/login/login.component';
 import { ProdutosListaComponent } from './components/produtos/produtos-lista/produtos-lista.component';
 import { CarrinhoListaComponent } from './components/carrinho-lista/carrinho-lista.component';
 import { PedidoComponent } from './components/pedido/pedido.component';
+import { CadastroClienteComponent } from './components/login/cadastro-cliente/cadastro-cliente.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,8 @@ import { PedidoComponent } from './components/pedido/pedido.component';
     LoginComponent,
     ProdutosListaComponent,
     CarrinhoListaComponent,
-    PedidoComponent
+    PedidoComponent,
+    CadastroClienteComponent
   ],
   imports: [
     BrowserModule,

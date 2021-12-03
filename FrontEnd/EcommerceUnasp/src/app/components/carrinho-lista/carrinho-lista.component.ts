@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Cliente } from 'src/app/models/cliente.model';
 import { Produto } from 'src/app/models/produto.model';
 import { ItensPedidoService } from 'src/app/services/itens-pedido.service';
@@ -21,7 +22,8 @@ export class CarrinhoListaComponent implements OnInit {
   constructor(
     private pedidoService: PedidoService,
     private clienteService: ClienteService,
-    private itensPedidoService: ItensPedidoService
+    private itensPedidoService: ItensPedidoService,
+    private router: Router
     ) { }
 
   ngOnInit(): void {
@@ -30,8 +32,8 @@ export class CarrinhoListaComponent implements OnInit {
   
   confirmarCompra(){
 
-    this.clienteService.getById('4').subscribe((clienteResponse: Cliente) => {
-      this.clienteService.cliente = clienteResponse;
+    //this.clienteService.getById('4').subscribe((clienteResponse: Cliente) => {
+      //this.clienteService.cliente = clienteResponse;
       if(this.clienteService.cliente == undefined)
       {
         alert("Cliente não cadastrado.");
@@ -51,11 +53,12 @@ export class CarrinhoListaComponent implements OnInit {
 
           this.itensPedidoService.post(this.itensPedido).subscribe(() =>
           {
+            this.router.navigate(["/"]);
             alert("Obrigado por comprar conosco!");
           })
         })
       }
-    });    
+    //});    
   }
 
 }

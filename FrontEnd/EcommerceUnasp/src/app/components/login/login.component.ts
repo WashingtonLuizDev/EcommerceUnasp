@@ -3,7 +3,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Cliente } from 'src/app/models/cliente.model';
 import { ClienteService } from 'src/app/services/cliente.service';
-import { UsuarioAdminService } from 'src/app/services/usuario-admin.service';
 
 @Component({
   selector: 'app-login',
@@ -30,19 +29,19 @@ export class LoginComponent implements OnInit {
 
   logar() {
     if (this.form.valid) {
-      let userAdm: UsuarioAdmin = new UsuarioAdmin();
-      userAdm.email = this.emailFormControl.value;
-      userAdm.senha = this.senhaFormControl.value;
-      this.usuarioAdminService.login(userAdm).subscribe((usuarioAdminIn: UsuarioAdmin) => {
-        this.usuarioAdminService.usuarioLogado = usuarioAdminIn;
-        this.Router.navigate(["/"]);
+      let cliente: Cliente = new Cliente();
+      cliente.email = this.emailFormControl.value;
+      cliente.senha = this.senhaFormControl.value;
+      this.clienteService.login(cliente).subscribe((clienteResponse: Cliente) => {
+        this.clienteService.cliente = clienteResponse;
+        this.Router.navigate(["/pedido"]);
       }, (error: any) => {
         let cliente: Cliente = new Cliente();
         cliente.email = this.emailFormControl.value;
         cliente.senha = this.senhaFormControl.value;
         this.clienteService.login(cliente).subscribe((cliente: Cliente) => {
           this.clienteService.cliente = cliente;
-          this.Router.navigate(["/"]);
+          this.Router.navigate(["/home"]);
         }, (error) => {
           alert("Email ou senha invalidos!");
         })

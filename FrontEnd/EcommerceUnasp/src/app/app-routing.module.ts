@@ -5,12 +5,12 @@ import { ClientesListaComponent } from './components/cliente/clientes-lista.comp
 import { ClienteComponent } from './components/cliente/cliente.component';
 import { ClienteEditarComponent } from './components/cliente/cliente-editar.component';
 import { HomeComponent } from './components/home/home.component';
-import { CategoriaComponent } from './components/categoria/categoria.component';
 import { LoginComponent } from './components/login/login.component';
 import { CarrinhoListaComponent } from './components/carrinho-lista/carrinho-lista.component';
 import { ProdutosListaComponent } from './components/produtos/produtos-lista/produtos-lista.component';
 import { ProdutosComponent } from './components/produtos/produtos.component';
 import { PedidoComponent } from './components/pedido/pedido.component';
+import { CadastroClienteComponent } from './components/login/cadastro-cliente/cadastro-cliente.component';
 
 const routes: Routes = [
   { path: 'lista-clientes', component: ClientesListaComponent },
@@ -22,7 +22,8 @@ const routes: Routes = [
   { path: 'pedido', component: PedidoComponent },
   { path: 'carrinho', component: CarrinhoListaComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'cadastroLogin', component: CadastroClienteComponent }
 ];
 
 @NgModule({
