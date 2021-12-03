@@ -59,12 +59,12 @@ export class ClienteComponent implements OnInit {
       if (this.cliente.id == undefined || this.cliente.id == null) {
         this.clienteService.post(this.cliente).subscribe((cliente: Cliente) => {
           this.cliente = cliente;
-          this.route.navigateByUrl('/lista-clientes');
+          this.route.navigate(['/lista-clientes']);
         });
       } else {
         this.clienteService.put(this.cliente).subscribe((cliente: Cliente) => {
           this.cliente = cliente;
-          this.route.navigateByUrl('/lista-clientes');
+          this.route.navigate(['/lista-clientes']);
         })
       }
     }

@@ -8,6 +8,8 @@ import { Observable } from 'rxjs';
 })
 export class ClienteService {
 
+  cliente!: Cliente;
+  
   constructor(private http: HttpClient) { }
 
   //Inserir no banco de dados.
@@ -31,7 +33,7 @@ export class ClienteService {
   }
 
   //Consultar um cliente especifico.
-  getById(id: string): Observable<Cliente>{
+  getById(id: string) {
     return this.http.get<Cliente>(`${"http://localhost:13326/api/Cliente/"}${id}`);
   }
 

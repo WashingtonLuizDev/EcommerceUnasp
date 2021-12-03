@@ -1,14 +1,18 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Pedido } from '../models/pedido.model';
+import { Produto } from '../models/produto.model';
+import { ItensPedidos } from '../models/itens-pedidos.model';
 @Injectable({
   providedIn: 'root'
 })
 export class PedidoService {
 
+  carrinho: ItensPedidos[] = [];
+
   constructor(private http: HttpClient) { }
 
-  post(pedido: Pedido) {
+  comprar(pedido: Pedido) {
     return this.http.post<Pedido>("http://localhost:13326/api/Pedido", pedido);
   }
 

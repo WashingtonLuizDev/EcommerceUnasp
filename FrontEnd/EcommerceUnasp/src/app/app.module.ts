@@ -11,6 +11,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { ClienteComponent } from './components/cliente/cliente.component';
 import { ClientesListaComponent } from './components/cliente/clientes-lista.component';
 import { ClienteEditarComponent } from './components/cliente/cliente-editar.component';
+import { ProdutosListaComponent } from './components/produtos/produtos-lista/produtos-lista.component';
+import { CarrinhoListaComponent } from './components/carrinho-lista/carrinho-lista.component';
+import { PedidoComponent } from './components/pedido/pedido.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { ClienteEditarComponent } from './components/cliente/cliente-editar.comp
     ProdutosComponent,
     ClienteComponent,
     ClientesListaComponent,
-    ClienteEditarComponent
+    ClienteEditarComponent,
+    ProdutosListaComponent,
+    CarrinhoListaComponent,
+    PedidoComponent
   ],
   imports: [
     BrowserModule,

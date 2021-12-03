@@ -8,7 +8,7 @@ export class ItensPedidoService {
 
   constructor(private http: HttpClient) { }
 
-  post(itensPedido: ItensPedidos) {
+  post(itensPedido: ItensPedidos[]) {
     return this.http.post<ItensPedidos>("http://localhost:13326/api/itensPedido", itensPedido);
   }
 

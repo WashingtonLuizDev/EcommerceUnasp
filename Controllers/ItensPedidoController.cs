@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 
 namespace EcommerceUnasp.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class ItensPedidoController : Controller
     {
         private EcommerceContext _context = new EcommerceContext();
@@ -38,11 +40,15 @@ namespace EcommerceUnasp.Controllers
         }
 
         [HttpPost]
-        public ActionResult<ItensPedido> Post(ItensPedido itensPedido)
+        public ActionResult<ItensPedido[]> Post(ItensPedido[] itensPedido)
         {
             using (_context)
             {
-                _context.ItensPedido.Add(itensPedido);
+                foreach (var item in itensPedido)
+                {
+                    _context.ItensPedido.Add(item);
+                }
+                
                 _context.SaveChanges();
             }
             return itensPedido;
