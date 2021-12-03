@@ -1,0 +1,23 @@
+<h1>Segue os itens que estão em sua compra!</h1>
+<br/>
+<table>
+    <tr>
+        <th></th>
+        <th>Produto</th>
+        <th>Valor unitário</th>
+        <th>Quantidade</th>
+        <th>Valor Total</th>
+    </tr>
+    <tr *ngFor="let item of itensPedido">
+        <td><img [src]="item.produto.imagem" alt=""></td>
+        <td>{{item.produto.titulo}}</td>
+        <td>{{item.valorUnitario}}</td>
+        <td>R$ {{item.quantidade | number : '1.2-2'}}</td>
+        <td>R$ {{item.valorTotal | number : '1.2-2'}}</td>
+    </tr>
+    <tr>
+        <td class="text-right" colspan="4">
+            <a href="javascript:" (click)="confirmarCompra()" class="btn btn-outline-primary me-2">Confirmar Compra</a>
+        </td>
+    </tr>
+</table>

@@ -49,6 +49,25 @@ namespace EcommerceUnasp.Controllers
             return cliente;
         }
 
+        [HttpPost("Login")]
+
+        public ActionResult<Cliente> Login(Cliente cliente)
+        {
+            using (_context)
+            {
+                Cliente user = _context.Clientes.Where(u => 
+                    u.Email.Equals(cliente.Email)
+                    && u.Senha.Equals(cliente.Senha)
+                ).FirstOrDefault();
+
+                if (user == null)
+                    return NotFound();
+                else
+                    user.Senha = "";
+                    return Ok(user);
+            }
+        }
+
         [HttpPut]
         public ActionResult<Cliente> Put(Cliente cliente)
         {

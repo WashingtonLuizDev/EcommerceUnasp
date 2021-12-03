@@ -1,0 +1,34 @@
+<h2>Atualizar Cliente</h2>
+
+<div *ngIf="cliente">
+    <br>
+    <br>
+    <br>
+    <br>
+    <h6>Cliente</h6>
+    <label>
+      Nome: <input placeholder="Insira o nome" [(ngModel)]="cliente.nome">
+    </label>
+    <br>
+    <label>
+      CPF: <input placeholder="Insira o CPF" [(ngModel)]="cliente.cpf">
+    </label>
+    <br>
+    <label>
+      CPF: <input placeholder="Insira o CPF" [(ngModel)]="cliente.cpf">
+    </label>
+    <br>
+    <label>
+      Data de Nascimento: <input placeholder="Insira a Data de Nascimento" [(ngModel)]="cliente.dataNascimento">
+    </label>
+    <br>
+    <label>
+      Email: <input placeholder="Insira o E-mail" [(ngModel)]="cliente.email">
+    </label>
+    <br>
+    <label>
+      Senha: <input placeholder="Insira a senha" [(ngModel)]="cliente.senha">
+    </label>
+    <br>   
+    <button (click)="updateCliente()">Salvar</button>
+  </div>

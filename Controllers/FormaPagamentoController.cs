@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 
 namespace EcommerceUnasp.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class FormaPagamentoController : Controller
     {
         private EcommerceContext _context = new EcommerceContext();

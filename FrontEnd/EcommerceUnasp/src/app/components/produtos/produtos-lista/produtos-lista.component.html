@@ -1,0 +1,15 @@
+<h1>Lista de produtos</h1>
+<br/>
+<table>
+    <tr>
+        <th>Produto</th>
+        <th>Titulo</th>
+        <th>Valor</th>
+    </tr>
+    <tr *ngFor="let produto of produtos">
+        <td><img [src]="produto.imagem" alt=""></td>
+        <td>{{produto.titulo}}</td>
+        <td>{{produto.valor}}</td>
+    </tr>
+</table>
+<a href="javascript:" [routerLink]="['/produto']" routerLinkActive="router-link-active"  class="btn btn-outline-primary me-2">Novo</a>
