@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Produto } from 'src/app/models/produto.model';
 import { ProdutosService } from 'src/app/services/produtos.service';
 
@@ -29,7 +30,8 @@ export class ProdutosComponent implements OnInit {
   });
 
   constructor(private formBuild: FormBuilder,
-    private produtoService: ProdutosService) {
+    private produtoService: ProdutosService,
+    private router: Router) {
     this.form = this.formBuild.group({
       imagemFormControl: this.imagemFormControl,
       tituloFormControl: this.tituloFormControl,
@@ -61,12 +63,13 @@ export class ProdutosComponent implements OnInit {
         //Caso não tenha ID, vamos inserir atraves do Post
         this.produtoService.post(this.produto).subscribe((produto: Produto) => {
           this.produto = produto; //Variavel do tipo objeto lá de cima receberá o objeto do backend
-
+          this.router.navigate(["/lista-produtos"]);
         });
       } else {
         //Caso já tenhamos ID, atualizaremos atraves do Put
         this.produtoService.put(this.produto).subscribe((produto: Produto) => {
           this.produto = produto; //Variavel do tipo objeto lá de cima receberá o objeto do backend
+          this.router.navigate(["/lista-produtos"]);
         });
       }
     }

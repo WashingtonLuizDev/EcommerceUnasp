@@ -1,3 +1,5 @@
+import { Produto } from "./produto.model";
+
 export class ItensPedidos {
   id !: number;
   pedidoId !: number;
@@ -5,4 +7,5 @@ export class ItensPedidos {
   quantidade !: number;
   valorUnitario !: number;
   valorTotal !: number;
+  produto!: Produto
 }

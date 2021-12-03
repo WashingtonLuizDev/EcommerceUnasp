@@ -13,8 +13,10 @@ import { ClientesListaComponent } from './components/cliente/clientes-lista.comp
 import { ClienteEditarComponent } from './components/cliente/cliente-editar.component';
 import { HomeComponent } from './components/home/home.component';
 import { CategoriaComponent } from './components/categoria/categoria.component';
-import { PedidoComponent } from './components/pedido/pedido.component';
 import { LoginComponent } from './components/login/login.component';
+import { ProdutosListaComponent } from './components/produtos/produtos-lista/produtos-lista.component';
+import { CarrinhoListaComponent } from './components/carrinho-lista/carrinho-lista.component';
+import { PedidoComponent } from './components/pedido/pedido.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,10 @@ import { LoginComponent } from './components/login/login.component';
     HomeComponent,
     CategoriaComponent,
     PedidoComponent,
-    LoginComponent
+    LoginComponent,
+    ProdutosListaComponent,
+    CarrinhoListaComponent,
+    PedidoComponent
   ],
   imports: [
     BrowserModule,

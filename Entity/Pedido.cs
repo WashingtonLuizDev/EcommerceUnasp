@@ -9,7 +9,6 @@ namespace EcommerceUnasp.Entity
     {
         public int Id { get; set; }
         public int ClienteId { get; set; }
-        public int CarrinnhoId { get; set; }
         public bool IsAtivo { get; set; }
         public bool IsFinalizado { get; set; }
         public decimal ValorFrete { get; set; }

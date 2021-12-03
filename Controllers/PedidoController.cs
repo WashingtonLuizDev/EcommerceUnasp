@@ -6,6 +6,8 @@ using System.Linq;
 
 namespace EcommerceUnasp.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class PedidoController : Controller
     {
         private EcommerceContext _context = new EcommerceContext();
